@@ -11,7 +11,7 @@ require("dotenv").config();
 app.use(express.json());
 app.use(cors(
   {
-    origin: ["https://e-commerce-xi-roan.vercel.app/"],
+    origin: ["https://e-commerce-xi-roan.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
   }
