@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors(
   {
     origin: ["https://e-commerce-xi-roan.vercel.app"],
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "PUT"],
     credentials: true,
      allowedHeaders: ['Content-Type']
   }
