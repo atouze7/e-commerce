@@ -9,7 +9,13 @@ const path = require("path");
 require("dotenv").config();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://e-commerce-xi-roan.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+));
 
 mongoose.connect(process.env.MONGO_DATABASE);
 
