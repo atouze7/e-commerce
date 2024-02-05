@@ -16,7 +16,7 @@ export default function LoginSignup() {
   const login = async () => {
     console.log("Logged in", formData);
     let responseData;
-    await fetch("http://localhost:4000/login", {
+    await fetch("https://e-commerce-server-chi-one.vercel.app/login", {
       method: "POST",
       headers: {
         Accept: "application/formdata",
@@ -38,7 +38,7 @@ export default function LoginSignup() {
   const signup = async () => {
     console.log("Signed up", formData);
     let responseData;
-    await fetch("http://localhost:4000/signup", {
+    await fetch("https://e-commerce-server-chi-one.vercel.app/signup", {
       method: "POST",
       headers: {
         Accept: "application/formdata",
