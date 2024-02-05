@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
   res.send("hi");
 });
 
-const storage = multer.diskStorage({
+/*const storage = multer.diskStorage({
   destination: "./upload/images",
   filename: (req, file, cb) => {
     return cb(
@@ -36,7 +36,7 @@ app.post("/upload", upload.single("product"), (req, res) => {
     success: 1,
     image_url: `http://localhost:${port}/images/${req.file.filename}`,
   });
-});
+});*/
 
 const Product = mongoose.model("Product", {
   id: {
