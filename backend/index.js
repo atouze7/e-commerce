@@ -17,7 +17,7 @@ app.use(cors(
   }
 ));
 
-app.use((req, res, next) => {
+const mid = app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "https://e-commerce-xi-roan.vercel.app);
   res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -187,7 +187,7 @@ app.post("/signup", async (req, res) => {
   res.json({ success: true, token });
 });
 
-app.post("/login", async (req, res) => {
+app.post("/login", mid ,async (req, res) => {
   let user = await Users.findOne({ email: req.body.email });
 
   if (user) {
