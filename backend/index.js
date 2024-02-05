@@ -18,6 +18,8 @@ app.use(cors(
   }
 ));
 
+app.options('*', cors())
+
 mongoose.connect(process.env.MONGO_DATABASE);
 
 app.get("/", (req, res) => {
