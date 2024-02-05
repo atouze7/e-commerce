@@ -19,7 +19,7 @@ export default function LoginSignup() {
     await fetch("https://e-commerce-server-chi-one.vercel.app/login", {
       method: "POST",
       headers: {
-        Accept: "application/formdata",
+        Accept: "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
