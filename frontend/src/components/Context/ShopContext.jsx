@@ -16,7 +16,7 @@ const ShopContextProvider = (props) => {
 
   useEffect(() => {
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/getcart", {
+      fetch("https://e-commerce-server-chi-one.vercel.app/getcart", {
         method: "POST",
         headers: {
           Accept: "application/formdata",
@@ -35,7 +35,7 @@ const ShopContextProvider = (props) => {
   const addToCart = (itemId) => {
     setCartItem((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/addtocart", {
+      fetch("https://e-commerce-server-chi-one.vercel.app/addtocart", {
         method: "POST",
         headers: {
           Accept: "application/formdata",
@@ -52,7 +52,7 @@ const ShopContextProvider = (props) => {
   const removeFromCart = (itemId) => {
     setCartItem((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/removefromcart", {
+      fetch("https://e-commerce-server-chi-one.vercel.app/removefromcart", {
         method: "POST",
         headers: {
           Accept: "application/formdata",
