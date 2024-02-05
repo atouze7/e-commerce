@@ -13,7 +13,8 @@ app.use(cors(
   {
     origin: ["https://e-commerce-xi-roan.vercel.app"],
     methods: ["POST", "GET"],
-    credentials: true
+    credentials: true,
+     allowedHeaders: ['Content-Type']
   }
 ));
 
